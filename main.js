@@ -86,7 +86,7 @@ function collideRect(rect1, rect2) {
 function createEnemy($container, x, y) {
   // Create a new image element for the enemy
   const $enemy = $("<img>")
-    .attr("src", "./img/enemyship.png") // Set the image source
+    .attr("src", "enemyship.png") // Set the image source
     .addClass("enemy"); // Add the 'enemy' class for styling
   $container.append($enemy); // Append the enemy image to the container
 
@@ -144,7 +144,7 @@ function updateEnemies($container) {
 function createPlayer($container) {
   STATE.x_pos = GAME_WIDTH / 2;
   STATE.y_pos = GAME_HEIGHT - 50;
-  const $player = $("<img>").attr("src", "./img/myship.png").addClass("player");
+  const $player = $("<img>").attr("src", "myship.png").addClass("player");
   $container.append($player);
   setPosition($player, STATE.x_pos, STATE.y_pos);
   setSize($player, STATE.spaceship_width);
@@ -179,7 +179,7 @@ function updatePlayer() {
 
 // Create a laser at a specific position
 function createLaser($container, x, y) {
-  const $laser = $("<img>").attr("src", "img/laser.png").addClass("laser");
+  const $laser = $("<img>").attr("src", "laser.png").addClass("laser");
 
   $container.append($laser);
   const laser = { x, y, $laser };
@@ -217,7 +217,7 @@ function updateLaser($container) {
 // Create an enemy laser at a specific position
 function createEnemyLaser($container, x, y) {
   const $enemyLaser = $("<img>")
-    .attr("src", "img/enemyLaser.png")
+    .attr("src", "enemyLaser.png")
     .addClass("enemyLaser");
   $container.append($enemyLaser);
   const enemyLaser = { x, y, $enemyLaser };
